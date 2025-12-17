@@ -46,5 +46,123 @@ let result = negatives.concat(positives);
 console.log("Result:", result);
 
 4.
+let arr = [1,2,4,5];
+let n = arr.length + 1;   
+
+let total = 0;
+for(let i = 1; i <= n; i++){
+    total += i;
+}
+
+let sum = 0;
+for(let i = 0; i < arr.length; i++){
+    sum += arr[i];
+}
+
+let missing = total - sum;
+console.log(missing); 
+
+5.
+let arr0 = [1,3,4,2,2];
+let freq = {};
+
+for(let num of arr0){
+    if(freq[num]){
+        console.log(num); 
+        break;
+    }
+    freq[num] = 1;
+}
+
+6.
+let arr1 = [1,2,3];
+let arr2 = [2,4,3];
+
+let set1 = new Set(arr1);
+let result0 = arr2.filter(num => set1.has(num));
+
+console.log(result0); 
+
+7.
+let arr3 = [-2,1,-3,4,-1,2,1,-5,4];
+
+let maxSum = arr[0];
+let currSum = 0;
+
+for(let i = 0; i < arr3.length; i++){
+    currSum += arr3[i];
+
+    if(currSum > maxSum){
+        maxSum = currSum;
+    }
+
+    if(currSum < 0){
+        currSum = 0;
+    }
+}
+console.log(maxSum); 
+
+8.
+let arr4 = [1,2,3];
+let K = 4;
+let count = 0;
+
+for(let i = 0; i < arr4.length; i++){
+    let sum = 0;
+    for(let j = i; j < arr4.length; j++){
+        sum += arr[j];
+        if(sum < K){
+            count++;
+        }
+    }
+}
+
+console.log(count); 
+
+9.
+let arr5 = [-2,1,-3,4,-1,2,1,-5];
+
+let maxSum1 = arr[0];
+let currSum1 = 0;
+
+for(let i = 0; i < arr5.length; i++){
+    currSum1 += arr5[i];
+
+    if(currSum1 > maxSum1){
+        maxSum1 = currSum1;
+    }
+
+    if(currSum1 < 0){
+        currSum1 = 0;
+    }
+}
+console.log(maxSum1); 
+
+10.
+let arr6 = [100,4,200,1,3,2];
+let set = new Set(arr6);
+let longest = 0;
+
+for(let num of set){
+    if(!set.has(num - 1)){  
+        let currentNum = num;
+        let count = 1;
+
+        while(set.has(currentNum + 1)){
+            currentNum++;
+            count++;
+        }
+        longest = Math.max(longest, count);
+    }
+}
+console.log(longest); 
+
+11.
+
+
+
+
+
+
 
 
