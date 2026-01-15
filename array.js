@@ -188,21 +188,53 @@
 // Reverse an array without using extra space 
 
 
-function Reverse(arr){
-    let left = 0
-    let right = arr.length -1
+// function Reverse(arr){
+//     let left = 0
+//     let right = arr.length -1
 
-    while(left < right){
-    [arr[left],arr[right]] = [arr[right],arr[left]]
+//     while(left < right){
+//     [arr[left],arr[right]] = [arr[right],arr[left]]
  
-    left++;
-    right--;
+//     left++;
+//     right--;
 
-    }
-  return arr;
+//     }
+//   return arr;
+// }
+
+// console.log(Reverse([1,2,3,4,5]));
+
+
+
+
+// find 2nd largest
+
+let arr =[3,6,9,5,10]
+
+let largest = -Infinity
+let second_largest = -Infinity 
+for(let i=0;i<arr.length;i++){
+ if(arr[i]>largest){
+  largest = arr[i]
+ }
+
 }
 
-console.log(Reverse([1,2,3,4,5]));
+for(let i=0;i<arr.length;i++){
+ if(arr[i] !== largest && arr[i]>second_largest){
+  second_largest = arr[i]
+ }
+
+}
+
+console.log(second_largest);
+
+
+
+//  state whther the given number is palindromic or not
+
+let num = 121
+
 
 
 
